@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: hsl(217, 12%, 63%);
+  background-color: hsl(216, 12%, 8%);
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rating-form-container {
+  flex: 1 0 auto;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  flex-shrink: 0;
+  padding: 1.3rem 0;
+}
+
+.container {
+  margin: 19.3rem auto 0;
+  padding: 4.5rem 3.5rem;
+  max-width: 41.5rem;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 24px;
+}
+
+.like-icon {
+  height: 5.2rem;
+  width: 5.2rem;
+  background-color: hsl(213, 9%, 25%);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+.rating-heading {
+  color: hsl(0, 0%, 100%);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2.2rem;
+}
+
+.rating-text {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 3.6rem;
+}
+
+.rate-submit-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.rating-scores {
+  display: flex;
+  gap: 2rem;
+}
+
+.rate-btn {
+  height: 5.2rem;
+  width: 5.2rem;
+  background-color: hsl(213, 9%, 25%);
+  font-size: 1.5rem;
+  color: hsl(217, 12%, 63%);
+  border-radius: 100%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.rate-btn:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+
+.rate-btn:active,
+.rate-btn:focus {
+  background-color: hsl(216, 12%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+
+.submit-rating {
+  text-transform: uppercase;
+  padding: 1.3rem 13.8rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  transition: all 0.3s;
+}
+
+.submit-rating:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+  cursor: pointer;
+}
+
+.thank-you-content {
+  text-align: center;
+}
+
+.thank-you-img {
+  margin-bottom: 3.5rem;
+}
+
+.selected-rating-text {
+  padding: 1rem 2rem;
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(213, 9%, 25%);
+  display: inline-block;
+  margin-bottom: 4.5rem;
+  border-radius: 36rem;
+}
+
+.thank-you-text {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.hidden {
+  display: none;
+  pointer-events: none;
+}
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 500ms;
+}
+
+.fade-in {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 500ms;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
