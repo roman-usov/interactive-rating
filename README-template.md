@@ -36,22 +36,23 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/roman-usov/interactive-rating)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Netlify](https://ru-interactive-rating.netlify.app/)
 
 ## My process
 
+1. Developed the overall HTML structure
+2. Created desktop styles for the rating form, including the states
+3. Created desktop styles for the thank-you card
+4. Wrote javascript code for selecting a rating, submitting it and displaying the thank-you card
+5. Added a fade-in and a fade-out class to accompany the hidden class
+6. Wrote javascript code that sets up an event listener for the transitionend event and enables the rating form to fade out first using transition and the thank-you card to fade-in
+
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
+- HTML5 & CSS3
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Desktop-first workflow
+- Javascript
 
 ### What I learned
 
