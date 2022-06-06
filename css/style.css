@@ -154,14 +154,14 @@ body {
 .fade-out {
   opacity: 0;
   visibility: hidden;
-  transition-property: all;
+  transition-property: opacity;
   transition-duration: 500ms;
 }
 
 .fade-in {
   opacity: 1;
   visibility: visible;
-  transition-property: all;
+  transition-property: opacity;
   transition-duration: 500ms;
 }
 
