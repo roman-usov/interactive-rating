@@ -36,7 +36,9 @@ ratingFormEl.addEventListener('submit', (e) => {
 
   ratingFormEl.addEventListener(
     'transitionend',
-    () => {
+    (ev) => {
+      ev.preventDefault();
+
       ratingFormEl.classList.add('hidden');
       thankYouEl.classList.remove('hidden');
       thankYouEl.classList.add('fade-in');
@@ -44,8 +46,8 @@ ratingFormEl.addEventListener('submit', (e) => {
     {
       capture: false,
       once: true,
-      passive: false,
     }
   );
+
   ratingFormEl.classList.add('fade-out');
 });
