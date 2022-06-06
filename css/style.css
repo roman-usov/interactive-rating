@@ -20,12 +20,12 @@ body {
   font-size: 1.5rem;
   color: hsl(217, 12%, 63%);
   background-color: hsl(216, 12%, 8%);
-  max-width: 100%;
+  /*max-width: 100%;*/
   display: flex;
   flex-direction: column;
 }
 
-.rating-form-container {
+.container-parent {
   flex: 1 0 auto;
 }
 
@@ -36,60 +36,59 @@ body {
   padding: 1.3rem 0;
 }
 
-.container {
-  margin: 19.3rem auto 0;
-  padding: 4.5rem 3.5rem;
-  max-width: 41.5rem;
+.container-form,
+.container-thank-you {
+  margin: 18rem auto 0;
+  max-width: 38rem;
   background-color: hsl(213, 19%, 18%);
   border-radius: 24px;
+  padding: 3rem;
 }
 
-.like-icon {
-  height: 5.2rem;
-  width: 5.2rem;
+.like-icon,
+.rate-btn {
+  height: 4.6rem;
+  width: 4.6rem;
   background-color: hsl(213, 9%, 25%);
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 3.5rem;
+}
+
+.like-icon {
+  margin-bottom: 3.25rem;
 }
 
 .rating-heading {
   color: hsl(0, 0%, 100%);
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 2.2rem;
+  margin-bottom: 2.25rem;
 }
 
 .rating-text {
-  font-size: 1.5rem;
   line-height: 1.6;
-  margin-bottom: 3.6rem;
+  margin-bottom: 3rem;
 }
 
 .rate-submit-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 3rem;
 }
 
 .rating-scores {
   display: flex;
-  gap: 2rem;
+  /*gap: 2rem;*/
+  justify-content: space-between;
 }
 
 .rate-btn {
-  height: 5.2rem;
-  width: 5.2rem;
-  background-color: hsl(213, 9%, 25%);
   font-size: 1.5rem;
   color: hsl(217, 12%, 63%);
-  border-radius: 100%;
   border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -107,7 +106,7 @@ body {
 
 .submit-rating {
   text-transform: uppercase;
-  padding: 1.3rem 13.8rem;
+  padding: 1.27rem 12.45rem;
   border-radius: 50px;
   border: none;
   font-size: 1.5rem;
@@ -126,10 +125,11 @@ body {
 
 .thank-you-content {
   text-align: center;
+  padding: 4.25rem 2.5rem 5rem;
 }
 
 .thank-you-img {
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
 }
 
 .selected-rating-text {
@@ -137,7 +137,7 @@ body {
   color: hsl(25, 97%, 53%);
   background-color: hsl(213, 9%, 25%);
   display: inline-block;
-  margin-bottom: 4.5rem;
+  margin-bottom: 3.5rem;
   border-radius: 36rem;
 }
 
@@ -165,4 +165,57 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/**************************/
+/* Below 425px (mobile) */
+/**************************/
+
+@media (max-width: 26.6em) {
+  body,
+  .rate-btn,
+  .submit-rating {
+    font-size: 1.4rem;
+  }
+
+  .container-form,
+  .container-thank-you {
+    margin: 15.4rem auto 0;
+    max-width: 32.75rem;
+  }
+
+  .container-form {
+    padding: 2.25rem;
+  }
+
+  .container-thank-you {
+    padding: 3.5rem 3rem 4.5rem;
+  }
+
+  .rating-heading {
+    font-size: 2.8rem;
+  }
+
+  .like-icon {
+    margin-bottom: 2.25rem;
+  }
+
+  .rate-submit-container {
+    gap: 2.25rem;
+    margin-bottom: 3.25rem;
+  }
+
+  .submit-rating {
+    text-transform: uppercase;
+    padding: 1.41rem 0;
+    text-align: center;
+  }
+
+  /*.rating-scores {*/
+  /*  gap: 1.75rem;*/
+  /*}*/
+
+  .selected-rating-text {
+    padding: 1rem 1.1rem;
+  }
 }
