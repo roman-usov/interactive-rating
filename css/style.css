@@ -135,6 +135,9 @@ body {
 }
 
 .submit-rating {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   text-transform: uppercase;
   padding: 1.27rem 12.45rem;
   border-radius: 50px;
