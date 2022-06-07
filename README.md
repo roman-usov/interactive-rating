@@ -13,8 +13,6 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -82,8 +80,7 @@ body {
 
 2. Practiced creating a hidden class accompanied by a fade-in and a fade-out class to add a bit of smoothness to the transition from the rating form to the thank-card
 
-Approach 1
-Tried to use display: none, but it doesn't support transitions, so I had to experiment with the timing when display: none will be applied in combination with using visibility and opacity that do support transitions.
+Approach 1. Tried to use display: none, but it doesn't support transitions, so I had to experiment with the timing when display: none will be applied in combination with using visibility and opacity that do support transitions.
 
 To handle the order in which the transitions should be applied, used the transitionend event.
 
@@ -134,8 +131,7 @@ ratingFormEl.classList.add('fade-out');
   transition-timing-function: ease-in-out;
 }
 ```
-Approach 2
-For the rating form to fade out, used the height, opacity and padding properties. The transition properties are set on the rating form itself.
+Approach 2. For the rating form to fade out, used the height, opacity and padding properties. The transition properties are set on the rating form itself.
 Adding the fade-out class to the rating form will set the height, opacity and padding to 0 based on the specified transition properties.
 
 The padding, opacity and height of the thank-you card are initially set to 0. Adding the fade-in class to the thank-you card will set the height to auto, opacity to 1 and the padding to the specified values.
