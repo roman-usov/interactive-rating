@@ -187,22 +187,6 @@ To control the fade-out and fade-in, used the transitionend event so that the fa
 
 4. Learned about the transitionend event that allows working around the display: none not supporting transitions
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
 ### Useful resources
 
 - [CSS Tricks](https://www.css-tricks.com) - This helped me with figuring out options for hiding/unhiding elements. Also, has a great guide for Flexbox.
