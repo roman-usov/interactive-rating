@@ -1,5 +1,5 @@
-const ratingFormEl = document.querySelector('.rating-form');
-const thankYouEl = document.querySelector('.thank-you-content');
+const ratingFormEl = document.querySelector('.container-form');
+const thankYouEl = document.querySelector('.container-thank-you');
 const ratingSubmitContainerEl = document.querySelector(
   '.rate-submit-container'
 );
@@ -36,16 +36,15 @@ ratingFormEl.addEventListener('submit', (e) => {
 
   ratingFormEl.addEventListener(
     'transitionend',
-    (ev) => {
-      ev.preventDefault();
+    () => {
+      // ev.preventDefault();
 
-      ratingFormEl.classList.add('hidden');
-      thankYouEl.classList.remove('hidden');
       thankYouEl.classList.add('fade-in');
     },
     {
       capture: false,
       once: true,
+      passive: true,
     }
   );
 

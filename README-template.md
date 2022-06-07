@@ -56,7 +56,79 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+1. Practiced creating a sticky footer
+   For that:
+   - created a parent container that houses the rating form and the thank-you card
+   - turned the body into a flex container with the flex-direction set to column
+   - allowed the parent container to grow
+
+```css
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-parent {
+  flex: 1 0 auto;
+}
+
+.attribution {
+  flex-shrink: 0;
+}
+```
+
+2. Practiced creating a hidden class accompanied by a fade-in and a fade-out class to add a bit of smoothness `to the transition from the rating form to the thank-card
+
+```js
+ratingFormEl.addEventListener(
+  'transitionend',
+  (ev) => {
+    ev.preventDefault();
+
+    ratingFormEl.classList.add('out-of-flow');
+    thankYouEl.classList.remove('out-of-flow');
+    thankYouEl.classList.add('not-visible');
+    thankYouEl.classList.add('fade-in');
+  },
+  {
+    capture: false,
+    once: true,
+  }
+);
+
+ratingFormEl.classList.add('fade-out');
+```
+
+```css
+ .out-of-flow {
+  display: none;
+  pointer-events: none;
+}
+
+.not-visible {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transition-property: visibility, opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.thank-you-content.fade-in {
+  visibility: visible;
+  opacity: 1;
+  transition-property: visibility, opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+```
+3. Learned that arbitrarily using 'all' with the transition property can result in unwanted too elastic switching from the desktop view to the mobile view
+
+4. Learned about the transitionend event that allows working around the display: none not supporting transitions
 
 To see how you can add code snippets, see below:
 

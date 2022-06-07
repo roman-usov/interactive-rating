@@ -26,6 +26,7 @@ body {
 
 .container-parent {
   flex: 1 0 auto;
+  margin-top: 18rem;
 }
 
 .attribution {
@@ -37,11 +38,39 @@ body {
 
 .container-form,
 .container-thank-you {
-  margin: 18rem auto 0;
   max-width: 38rem;
+  margin: 0 auto;
   background-color: hsl(213, 19%, 18%);
   border-radius: 24px;
+}
+
+.container-form {
   padding: 3rem;
+  height: auto;
+  transition-property: padding, height, opacity;
+  transition-duration: 0.3s;
+}
+
+.container-form.fade-out {
+  height: 0;
+  opacity: 0;
+  padding: 0;
+}
+
+.container-thank-you {
+  text-align: center;
+  padding: 0;
+  opacity: 0;
+  height: 0;
+  transition-property: height, padding, opacity;
+  transition-delay: 0.1s;
+  transition-duration: 0s, 0s, 0.3s;
+}
+
+.container-thank-you.fade-in {
+  padding: 4.25rem 2.5rem 5rem;
+  height: auto;
+  opacity: 1;
 }
 
 .like-icon,
@@ -80,7 +109,6 @@ body {
 
 .rating-scores {
   display: flex;
-  /*gap: 2rem;*/
   justify-content: space-between;
 }
 
@@ -122,11 +150,6 @@ body {
   cursor: pointer;
 }
 
-.thank-you-content {
-  text-align: center;
-  padding: 4.25rem 2.5rem 5rem;
-}
-
 .thank-you-img {
   margin-bottom: 3rem;
 }
@@ -145,24 +168,28 @@ body {
   line-height: 1.6;
 }
 
-.hidden {
-  display: none;
-  pointer-events: none;
-}
+/*.out-of-flow {*/
+/*  height: 0;*/
+/*  pointer-events: none;*/
+/*}*/
 
-.fade-out {
-  opacity: 0;
-  visibility: hidden;
-  transition-property: opacity;
-  transition-duration: 500ms;
-}
+/*.not-visible {*/
+/*  opacity: 0;*/
+/*  visibility: hidden;*/
+/*}*/
+/*.fade-out {*/
+/*  visibility: hidden;*/
+/*  opacity: 0;*/
+/*  transition: visibility 0s, opacity 0.5s;*/
+/*  transition-delay: 0s, 0.5s;*/
+/*}*/
 
-.fade-in {
-  opacity: 1;
-  visibility: visible;
-  transition-property: opacity;
-  transition-duration: 500ms;
-}
+/*.thank-you-content.fade-in {*/
+/*  visibility: visible;*/
+/*  opacity: 1;*/
+/*  transition: visibility 0s, opacity 0.5s;*/
+/*  transition-delay: 0s, 0.5s;*/
+/*}*/
 
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -179,9 +206,12 @@ body {
     font-size: 1.4rem;
   }
 
+  .container-parent {
+    margin-top: 15.4rem;
+  }
+
   .container-form,
   .container-thank-you {
-    margin: 15.4rem auto 0;
     max-width: 32.75rem;
   }
 
@@ -189,7 +219,7 @@ body {
     padding: 2.25rem;
   }
 
-  .container-thank-you {
+  .container-thank-you.fade-in {
     padding: 3.5rem 3rem 4.5rem;
   }
 
