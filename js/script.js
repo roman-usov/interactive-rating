@@ -37,8 +37,6 @@ ratingFormEl.addEventListener('submit', (e) => {
   ratingFormEl.addEventListener(
     'transitionend',
     () => {
-      // ev.preventDefault();
-
       thankYouEl.classList.add('fade-in');
     },
     {
